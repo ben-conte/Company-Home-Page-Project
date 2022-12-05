@@ -1,0 +1,449 @@
+/* Universal Styles */
+
+html {
+    font-family: "Georgia", sans-serif;
+    font-size: 16px;
+  }
+  
+  .main-content {
+    position: relative;
+    top: 5.3125rem; /* To offset for fixed header. */
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .button {
+    border-radius: 10px;
+    background-color: lightseagreen;
+    color: rgba(255, 255, 255, 0.919);
+    font-weight: bold;
+  }
+
+  .image-container {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  @media only screen and (max-width: 760px) {
+    .main-content {
+      top: 2.5625rem;
+    }
+  }
+  
+  /* Header */
+  
+  header {
+    position: fixed;
+    width: 100%;
+    /* border-bottom: solid 1px #c6c1c1; */
+    background-color: #000201;
+    z-index: 2;
+  }
+  
+  header .content {
+    display: flex;
+    align-items: center;
+    padding: 1.875rem 5rem;
+    color: whitesmoke;
+    height: 1.5625rem;
+  }
+  
+  header .logo {
+    flex: 1;
+    color: whitesmoke;
+    font-size: 1.5rem;
+    font-family: "Georgia";
+  }
+  
+  header nav ul {
+    display: flex;
+  }
+  
+  nav li {
+    padding-left: 3.5rem;
+  }
+  
+  nav a {
+    vertical-align: bottom;
+    line-height: 1.6;
+    font-size: 1.15rem;
+    color: whitesmoke;
+  }
+  
+  header .mobile {
+    display: none;
+  }
+  
+  header li a:hover {
+    color: rgb(43, 247, 236);
+  }
+  
+  @media only screen and (max-width: 625px) {
+    header .content {
+      padding: .5rem 1rem;
+    }
+  
+    header .mobile li {
+      padding: 0;
+    }
+
+    header .logo {
+      font-size: 1.1rem;
+    }
+
+    nav a {
+      font-size: 0.9rem;
+    }
+
+    nav li {
+      padding-left: 2rem;
+    }
+  }
+  
+  /* Hero Banner Section */
+  
+  #hero-banner-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 43.5rem;
+    background-image: url("../Images/hero-banner.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  #sign-up-cta {
+    padding: 0 4rem 2rem 4rem;
+    margin: 5rem;
+    border-radius: 15px;
+    background-color: rgba(2, 23, 13, .85);
+  }
+  
+  #sign-up-cta .content {
+    display: flex;
+    flex-direction: column;
+    max-width: 40rem;
+    margin-top: 2rem;
+    font-family: "Georgia", serif;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    color: white;
+  }
+  
+  #sign-up-cta h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+  }
+
+  #sign-up-cta .striking {
+    font-family: "Prata", serif;
+    padding-bottom: .75rem;
+  }
+  
+  #sign-up-cta .button {
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+    padding: 1.25rem 3rem;
+    transition: 0.15s;
+  }
+
+  #sign-up-cta .button:hover {
+    box-shadow: -.3rem .3rem whitesmoke;
+    background-color: rgb(255, 128, 0);
+    margin-top: 2.2rem;
+    margin-bottom: 0.3rem;
+    margin-left: 0.3rem;
+    cursor: pointer;
+  }
+
+  #sign-up-cta .button:active {
+    box-shadow: -.1rem .1rem whitesmoke;
+    margin-top: 2.4rem;
+    margin-bottom: 0.1rem;
+    margin-left: 0.1rem;
+    cursor: pointer;
+  }
+  
+  @media only screen and (max-width: 625px) {
+    #hero-banner-section {
+      align-items: center;
+      justify-content: center;
+      min-height: 20rem;
+    }
+  
+    #sign-up-cta {
+      position: static;
+      width: auto;
+      height: auto;
+      background-color: rgba(2, 23, 13, .85);
+      border: none;
+      margin: 10%;
+      padding: 5%;
+    }
+  
+    #sign-up-cta .content {
+      margin-top: 0;
+    }
+  
+    #sign-up-cta h1 {
+      font-size: 2.5rem;
+    }
+  
+    #sign-up-cta span {
+      display: none;
+    }
+    
+    #sign-up-cta .button {
+      margin-top: 0;
+    }
+    
+    #sign-up-cta .button:hover {
+      box-shadow: -.3rem .3rem whitesmoke;
+      background-color: rgb(255, 128, 0);
+      margin-top: -0.3rem;
+      margin-bottom: 0.3rem;
+      margin-left: 0.3rem;
+      cursor: pointer;
+    }
+  
+    #sign-up-cta .button:active {
+      box-shadow: -.1rem .1rem whitesmoke;
+      margin-top: -0.1rem;
+      margin-bottom: 0.1rem;
+      margin-left: 0.1rem;
+      cursor: pointer;
+    }
+  }
+  
+  /* Offerings Section */
+  #offerings-title {
+    width: 100%;
+    background-color: #f3f3f3;
+    padding-top: 5%;
+  }
+
+  #offerings-title h1 {
+    font-size: 3rem;
+    text-align: center;
+    width: 100%;
+    background-color: #f3f3f3;
+  }
+
+  #offerings-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2.25% 5% 5% 5%;
+    background-color: #f3f3f3;
+  }
+  
+  .offering {
+    flex: 1;
+    padding: 2rem;
+    margin: 1.25rem;
+    background-color: white;
+  }
+
+  .offering {
+    max-width: 400px;
+    min-width: 300px;
+  }
+  
+  .offering .image-container {
+    width: 100%;
+    height: 40%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  #offering-section .content {
+    padding: 2.5rem 0 0 0;
+  }
+  
+  .offering h2 {
+    padding: 1.25rem 0;
+    font-size: 2.25rem;
+    line-height: 1.15;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .offering h3 {
+    font-size: 1.25rem;
+    line-height: 1.2;
+    font-weight: 300;
+    color: #4a4a4a;
+  }
+  
+  @media only screen and (max-width: 760px) {
+    #offerings-section {
+      padding: 3rem 2.5% 3rem 0%;
+      justify-content: space-between;
+    }
+    
+    #offerings-title {
+      background-color: white;
+    }
+
+    #offerings-content {
+      background-color: white;
+    }
+
+    #offerings-title h1 {
+      font-size: 2.4rem;
+      background-color: white;
+      padding-bottom: 1rem;
+    }
+  
+    .offering {
+      margin: 0 0 0 2.5%;
+    }
+
+    .offering h2 {
+      font-size: 1.75rem;
+    }
+  
+  }
+
+  @media only screen and (max-width: 1300px) {
+    #offerings-title {
+      padding-top: 8%;
+    }
+  }
+  
+  /* Team Section */
+  
+  #team-section {
+    padding: 4rem 0;
+    background-color: #030426;
+  }
+  
+  #team-section .content {
+    padding: 0 .625rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  #team-section .content h2 {
+    font-size: 3rem;
+    color: white;
+  }
+  
+  #team-section .content h3 {
+    font-size: 1rem;
+    line-height: 1.4;
+    font-weight: 300;
+    color: white;
+  }
+  
+  #team-section .team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+  }
+
+  #team-section .person-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    padding: 0 1%;
+  }
+
+  #team-section .person-container h3 {
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+
+  #team-section .image-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  
+  @media only screen and (max-width: 760px) {
+    #team-section .content h2 {
+      font-size: 2.4rem;
+    }
+    
+    #team-section .image-container {
+      width: 125px;
+      height: 125px;
+    }
+  }
+  
+  /* Quotes Section */
+  
+  #quotes-section {
+    background-color: #f3f3f3;
+  }
+  
+  #quotes-section .content {
+    padding: 5rem;
+  }
+  
+  #quotes-section .quote {
+    padding-right: 1.875rem;
+    font-family: "Palatino", serif;
+    font-size: 1.875rem;
+    line-height: 1.5;
+    font-style: italic;
+    color: #4a4a4a;
+  }
+  
+  #quotes-section .quote-citation {
+    height: 1.875rem;
+  }
+  
+  @media only screen and (max-width: 760px) {
+    #quotes-section .content {
+      padding: 1.875rem;
+    }
+  
+    #quotes-section .quote {
+      font-size: 1rem;
+      line-height: 1.4;
+      padding-right: 0;
+    }
+  }
+
+  /* Footer */
+  
+  footer {
+    background-color: black;
+    padding: 1.5rem 2rem;
+  }
+  
+  footer .content {
+    color: white;
+    display: flex;
+    font-size: .75rem;
+    padding: 0;
+  }
+  
+  footer .copyright {
+    flex-grow: 1;
+  }
+  
+  @media only screen and (max-width: 760px) {
+    footer .content {
+      font-size: .625rem;
+    }
+  }
